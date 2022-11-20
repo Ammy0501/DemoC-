@@ -57,40 +57,6 @@ public class Demo : MonoBehaviour
     {Dragable.transform.position = new Vector2(worldPos.x, worldPos.y);}
     void Drop()
     {isDragable = false;}
-    public void FixedUpdate()
-    {currentTimeToSpawnCar -= Time.deltaTime;
-     currentTimeToSpawnCoin -= Time.deltaTime;
-        if (currentTimeToSpawnCar < 0)
-        {carToSpawn = Random.Range(1, 9);
-            switch (carToSpawn)
-            {   case 8:
-                    Instantiate(car8, new Vector3(canvasXOutsideScreenSpace, Random.Range(canvasYMin, canvasYMax), 0 /*2D Space doesn´t have a third dimension so we default to 0*/), Quaternion.identity);
-                    break;
-                case 7:
-                    Instantiate(car7, new Vector3(canvasXOutsideScreenSpace, Random.Range(canvasYMin, canvasYMax), 0 /*2D Space doesn´t have a third dimension so we default to 0*/), Quaternion.identity);
-                    break;
-                case 6:
-                    Instantiate(car6, new Vector3(canvasXOutsideScreenSpace, Random.Range(canvasYMin, canvasYMax), 0 /*2D Space doesn´t have a third dimension so we default to 0*/), Quaternion.identity);
-                    break;
-                case 5:
-                    Instantiate(car5, new Vector3(canvasXOutsideScreenSpace, Random.Range(canvasYMin, canvasYMax), 0 /*2D Space doesn´t have a third dimension so we default to 0*/), Quaternion.identity);
-                    break;
-                case 4:
-                    Instantiate(car4, new Vector3(canvasXOutsideScreenSpace, Random.Range(canvasYMin, canvasYMax), 0 /*2D Space doesn´t have a third dimension so we default to 0*/), Quaternion.identity);
-                    break;
-                case 3:
-                    Instantiate(car3, new Vector3(canvasXOutsideScreenSpace, Random.Range(canvasYMin, canvasYMax), 0 /*2D Space doesn´t have a third dimension so we default to 0*/), Quaternion.identity);
-                    break;
-                case 2:
-                    Instantiate(car2, new Vector3(canvasXOutsideScreenSpace, Random.Range(canvasYMin, canvasYMax), 0 /*2D Space doesn´t have a third dimension so we default to 0*/), Quaternion.identity);
-                    break;
-                case 1:
-                    Instantiate(car1, new Vector3(canvasXOutsideScreenSpace, Random.Range(canvasYMin, canvasYMax), 0 /*2D Space doesn´t have a third dimension so we default to 0*/), Quaternion.identity);
-                    break;}
-            currentTimeToSpawnCar = timeToSpawnCar;}
-        if (currentTimeToSpawnCoin < 0)
-        {Instantiate(coin, new Vector3(canvasXOutsideScreenSpace, Random.Range(canvasYMin, canvasYMax), 0 /*2D Space doesn´t have a third dimension so we default to 0*/), Quaternion.identity);
-            currentTimeToSpawnCoin = timeToSpawnCoin;}}
     public void OnTriggerEnter2D(Collider2D other)
     { if (other.tag == "<<")
         {obj1String.SetActive(true);}
