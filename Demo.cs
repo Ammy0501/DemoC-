@@ -25,10 +25,6 @@ public class Demo : MonoBehaviour
     private bool dragActive = false;
     private Vector2 screenPos;
     private Vector3 worldPos;
-    public float currentTimeToSpawnCar;
-    public float currentTimeToSpawnCoin;
-    public float timeToSpawnCar;
-    public float timeToSpawnCoin;
     public void Start()
     public void Update()
     {if (currentTimeToTween > currentTimeToTween / 2)
